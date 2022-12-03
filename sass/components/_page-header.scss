@@ -10,77 +10,77 @@
 
 .nav-list {
   display: flex;
-}
 
-.nav-list__item:not(:first-child) {
-  margin-left: 50px;
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  &__link {
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: fill, color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+      fill: $third-color;
+    }
+  }
+
+  &__link--current {
+    color: $third-color;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+
+      border-bottom: 4px solid $third-color;
+      border-radius: 2px;
+    }
+  }
 }
 
 .contacts {
   display: flex;
   margin-left: auto;
-}
 
-.contacts__item {
-  @extend %centered-flex;
-  &:not(:first-child) {
-    margin-left: 50px;
+  &__item {
+    @extend %centered-flex;
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
   }
-}
 
-.nav-list__link {
-  color: $secondary-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 10px;
 
-  transition: fill, color 250ms $timing-function;
+    transition: fill, color 250ms $timing-function;
 
-  &:hover,
-  &:focus {
-    color: $third-color;
-    fill: $third-color;
+    &:hover,
+    &:focus {
+      color: $third-color;
+      fill: $third-color;
+    }
   }
-}
 
-.nav-list__link--current {
-  color: $third-color;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 0;
-    width: 100%;
-
-    border-bottom: 4px solid $third-color;
-    border-radius: 2px;
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
   }
-}
-
-.contacts__link {
-  display: flex;
-  align-items: center;
-  color: var(--main-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 10px;
-
-  transition: fill, color 250ms $timing-function;
-
-  &:hover,
-  &:focus {
-    color: $third-color;
-    fill: $third-color;
-  }
-}
-
-.contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
 }

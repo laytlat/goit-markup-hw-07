@@ -8,11 +8,11 @@
 
 .footer-list {
   display: flex;
-}
 
-.footer-list__logo {
-  display: inline-block;
-  margin-bottom: 20px;
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
 }
 
 .adress {
@@ -53,35 +53,35 @@
 .footer-social-links {
   margin-left: 70px;
   margin-top: 20px;
-}
 
-.footer-social-links__icons {
-  display: flex;
-  justify-content: center;
-}
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-social-links__item {
-  width: 44px;
-  height: 44px;
+  &__item {
+    width: 44px;
+    height: 44px;
 
-  margin-right: 10px;
-}
+    margin-right: 10px;
+  }
 
-.footer-social-links__link {
-  @extend %centered-flex;
+  &__link {
+    @extend %centered-flex;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  fill: $sixth-color;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+    fill: $sixth-color;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms $timing-function;
+    transition: background-color 250ms $timing-function;
 
-  &:focus,
-  &:hover {
-    background-color: $third-color;
+    &:focus,
+    &:hover {
+      background-color: $third-color;
+    }
   }
 }
 
@@ -93,47 +93,47 @@
 .subscription {
   display: flex;
   margin-top: 20px;
-}
 
-.subscription__input {
-  background-color: $seventh-color;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  outline: none;
+  &__input {
+    background-color: $seventh-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
 
-  min-width: 360px;
-  padding-left: 15px;
+    min-width: 360px;
+    padding-left: 15px;
 
-  color: $fourth-color;
+    color: $fourth-color;
 
-  &:focus {
-    border-color: $third-color;
-  }
-}
-
-.subscription__button {
-  @extend %centered-flex;
-
-  margin-left: 12px;
-  padding: 10px 28px;
-
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
-  fill: $sixth-color;
-  color: $sixth-color;
-  background-color: $third-color;
-
-  &:focus,
-  &:hover {
-    background-color: $ninth-color;
+    &:focus {
+      border-color: $third-color;
+    }
   }
 
-  transition: background-color 250ms $timing-function;
-}
+  &__button {
+    @extend %centered-flex;
 
-.subscription__icon {
-  margin-left: 10px;
+    margin-left: 12px;
+    padding: 10px 28px;
+
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    fill: $sixth-color;
+    color: $sixth-color;
+    background-color: $third-color;
+
+    &:focus,
+    &:hover {
+      background-color: $ninth-color;
+    }
+
+    transition: background-color 250ms $timing-function;
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
 }
